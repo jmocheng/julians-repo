@@ -133,11 +133,11 @@ def eta(first_stop, second_stop, route_map):
     for i in returnvalue:
         totaltime += i["travel_time_mins"]
     
-    yourmom = 0
+    betweens = 0
     for i in range(lower,upper):
-        yourmom += returnvalue[i]["travel_time_mins"]
+        betweens += returnvalue[i]["travel_time_mins"]
 
     if start < end:
-        return yourmom
+        return betweens
     else:
-        return totaltime - yourmom
+        return totaltime - betweens
